@@ -5,15 +5,14 @@ using Xunit;
 
 namespace ThinkAM.ThinkEvent.Tests.Organizations
 {
-
     [CollectionDefinition(nameof(OrganizationsBogusCollection))]
     public class OrganizationsBogusCollection : ICollectionFixture<OrganizationTestBogusFixture>
     { }
-    public class OrganizationTestBogusFixture: ThinkEventBogustBase
+
+    public class OrganizationTestBogusFixture : ThinkEventBogustBase
     {
         public IEnumerable<CreateOrganizationTypeDto> GenerateCreateOrganizationTypeDto(int length)
         {
-
             var organizationTypes = GetFaker<CreateOrganizationTypeDto>()
                 .CustomInstantiator(f => new CreateOrganizationTypeDto
                 {
@@ -26,6 +25,5 @@ namespace ThinkAM.ThinkEvent.Tests.Organizations
         {
             return GenerateCreateOrganizationTypeDto(1).FirstOrDefault();
         }
-
     }
 }

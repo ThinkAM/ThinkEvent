@@ -4,10 +4,10 @@ using Xunit;
 
 namespace ThinkAM.ThinkEvent.Tests.Authorization
 {
-
     [CollectionDefinition(nameof(AccountBogusCollection))]
     public class AccountBogusCollection : ICollectionFixture<AccountTestBogusFixture>
     { }
+
     public class AccountTestBogusFixture : ThinkEventBogustBase
     {
         public List<RegisterInput> GenerateRegisterInput(int length)
@@ -33,7 +33,5 @@ namespace ThinkAM.ThinkEvent.Tests.Authorization
         {
             return GenerateRegisterInput(1)[0];
         }
-
-
     }
 }

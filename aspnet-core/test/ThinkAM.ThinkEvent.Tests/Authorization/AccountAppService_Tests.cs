@@ -13,13 +13,12 @@ namespace ThinkAM.ThinkEvent.Tests.Authorization
         private readonly IAccountAppService _accountAppService;
         private readonly AccountTestBogusFixture _accountTestBogus;
 
-        public AccountAppService_Tests( AccountTestBogusFixture accountTestBogus)
+        public AccountAppService_Tests(AccountTestBogusFixture accountTestBogus)
         {
             _accountTestBogus = accountTestBogus;
             _accountAppService = Resolve<IAccountAppService>();
         }
 
-      
         [Fact(DisplayName = "Register")]
         [Trait("Category", "Account")]
         public async Task Should_Register()
@@ -52,7 +51,5 @@ namespace ThinkAM.ThinkEvent.Tests.Authorization
             tenant.ShouldNotBeNull();
             tenant.State.ShouldBe(TenantAvailabilityState.Available);
         }
-
-
     }
 }

@@ -49,8 +49,5 @@ namespace ThinkAM.ThinkEvent.Tests.Organizations
                 organizationType.ShouldNotBeNull();
             });
         }
-
-
-
     }
 }

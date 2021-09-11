@@ -17,7 +17,6 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
     {
         private readonly IRoleAppService _roleAppService;
         private readonly RoleTestBogusFixture _roleTestFixture;
-
         private readonly IUserAppService _userAppService;
         private readonly UserTestBogusFixture _userTestFixture;
 
@@ -40,7 +39,6 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
             var roles = _roleTestFixture.GenerateCreateRoleDtos(length);
             var tasks = roles.Select(role => _roleAppService.CreateAsync(role)).ToArray();
             Task.WaitAll(tasks);
-
 
             // Act
             var output = await _roleAppService.GetRolesAsync(new GetRolesInput { Permission = PermissionNames.Pages_Users });
@@ -76,9 +74,7 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
 
             // Assert
             output.Items.Count.ShouldBeGreaterThan(0);
-
         }
-
 
         [Fact(DisplayName = "Delete")]
         [Trait("Category", "Role")]
@@ -91,16 +87,13 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
             // Act
             await _roleAppService.DeleteAsync(roleCreated);
 
-
             // Assert
             await UsingDbContextAsync(async context =>
             {
                 var output = await context.Roles.FindAsync(roleCreated.Id);
                 output.IsDeleted.ShouldBe(true);
             });
-
         }
-
 
         [Fact(DisplayName = "Delete With Users")]
         [Trait("Category", "Role")]
@@ -117,16 +110,13 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
             // Act
             await _roleAppService.DeleteAsync(roleCreated);
 
-
             // Assert
             await UsingDbContextAsync(async context =>
             {
                 var output = await context.Roles.FindAsync(roleCreated.Id);
                 output.IsDeleted.ShouldBe(true);
             });
-
         }
-
 
         [Fact(DisplayName = "Update")]
         [Trait("Category", "Role")]
@@ -140,7 +130,6 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
 
             // Act
             await _roleAppService.UpdateAsync(roleCreated);
-
 
             // Assert
             await UsingDbContextAsync(async context =>
@@ -165,9 +154,5 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
             output.Role.Name.ShouldBe(role.Name);
             output.GrantedPermissionNames.Count.ShouldBe(role.GrantedPermissions.Count);
         }
-
-
-
-
     }
 }

@@ -5,10 +5,10 @@ using Xunit;
 
 namespace ThinkAM.ThinkEvent.Tests.Roles
 {
-
     [CollectionDefinition(nameof(RolesBogusCollection))]
     public class RolesBogusCollection : ICollectionFixture<RoleTestBogusFixture>
     { }
+
     public class RoleTestBogusFixture : ThinkEventBogustBase
     {
         public IEnumerable<CreateRoleDto> GenerateCreateRoleDtos(int length)
@@ -28,7 +28,5 @@ namespace ThinkAM.ThinkEvent.Tests.Roles
         {
             return GenerateCreateRoleDtos(1).FirstOrDefault();
         }
-
-       
     }
 }

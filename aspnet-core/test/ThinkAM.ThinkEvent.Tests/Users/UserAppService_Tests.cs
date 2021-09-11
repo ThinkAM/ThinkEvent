@@ -105,7 +105,6 @@ namespace ThinkAM.ThinkEvent.Tests.Users
                 output.IsActive.ShouldBeFalse();
             });
         }
-
        
         [Fact(DisplayName = "Activate")]
         [Trait("Category", "User")]
@@ -113,7 +112,6 @@ namespace ThinkAM.ThinkEvent.Tests.Users
         {
             // Arrange
             var user = _userTestFixture.GetValidCreateUserDto(false);
-
             var userCreated = await _userAppService.CreateAsync(user);
 
             // Act

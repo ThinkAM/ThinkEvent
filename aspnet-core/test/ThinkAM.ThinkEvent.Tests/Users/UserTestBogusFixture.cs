@@ -5,10 +5,10 @@ using Xunit;
 
 namespace ThinkAM.ThinkEvent.Tests.Users
 {
-
     [CollectionDefinition(nameof(UserBogusCollection))]
     public class UserBogusCollection : ICollectionFixture<UserTestBogusFixture>
     { }
+
     public class UserTestBogusFixture : ThinkEventBogustBase
     {
         public IEnumerable<CreateUserDto> GenerateCreateUserDto(int length, bool isActive = true)
@@ -30,12 +30,10 @@ namespace ThinkAM.ThinkEvent.Tests.Users
 
             return users.Generate(length);
         }
-
+        
         public CreateUserDto GetValidCreateUserDto(bool isActive = true)
         {
             return GenerateCreateUserDto(1, isActive).FirstOrDefault();
         }
-
-        
     }
 }

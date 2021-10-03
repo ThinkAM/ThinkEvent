@@ -105,7 +105,10 @@ namespace ThinkAM.ThinkEvent.Users
         {
             await Repository.UpdateAsync(user.Id, async (entity) =>
             {
-                entity.IsActive = true;
+                await Task.Run(() =>
+                {
+                    entity.IsActive = true;
+                });
             });
         }
 
@@ -114,7 +117,10 @@ namespace ThinkAM.ThinkEvent.Users
         {
             await Repository.UpdateAsync(user.Id, async (entity) =>
             {
-                entity.IsActive = false;
+                await Task.Run(() =>
+                {
+                    entity.IsActive = false;
+                });
             });
         }
 

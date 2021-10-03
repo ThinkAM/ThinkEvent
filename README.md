@@ -1,19 +1,17 @@
 # Important
 
-Issues of this repository are tracked on https://github.com/aspnetboilerplate/aspnetboilerplate. Please create your issues on https://github.com/aspnetboilerplate/aspnetboilerplate/issues.
+Issues of this repository are tracked on [https://github.com/ThinkAM/ThinkEvent](https://github.com/ThinkAM/ThinkEvent). Please create your issues on [https://github.com/ThinkAM/ThinkEvent/issues](https://github.com/ThinkAM/ThinkEvent/issues).
 
 # Introduction
 
-This is a template to create **ASP.NET Core MVC / Angular** based startup projects for [ASP.NET Boilerplate](https://aspnetboilerplate.com/Pages/Documents). It has 2 different versions:
-
-1. [ASP.NET Core MVC & jQuery](https://aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Core) (server rendered multi-page application).
-2. [ASP.NET Core & Angular](https://aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Angular) (single page application).
+This is a template to create **Angular** based startup projects for [ASP.NET Boilerplate](https://aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Angular).
  
 User Interface is based on [AdminLTE theme](https://github.com/ColorlibHQ/AdminLTE).
  
 # Download
 
-Create & download your project from https://aspnetboilerplate.com/Templates
+- Create & download your project from [https://aspnetboilerplate.com/Templates](https://aspnetboilerplate.com/Templates)
+- Download & install Visual Studio [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com/)
 
 # Screenshots
 
@@ -29,8 +27,8 @@ Create & download your project from https://aspnetboilerplate.com/Templates
 
 # Documentation
 
-* [ASP.NET Core MVC & jQuery version.](https://aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Core)
-* [ASP.NET Core & Angular  version.](https://aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Angular)
+- [ASP.NET Core & Angular  version.](https://aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Angular)
+- [CRUD API - pt-BR](https://felipealb.medium.com/j%C3%A1-parou-para-pensar-que-tudo-na-vida-%C3%A9-um-evento-53aafc4ac75d)
 
 # License
 

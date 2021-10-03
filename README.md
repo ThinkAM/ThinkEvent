@@ -29,6 +29,7 @@ User Interface is based on [AdminLTE theme](https://github.com/ColorlibHQ/AdminL
 
 - [ASP.NET Core & Angular  version.](https://aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Angular)
 - [CRUD API - pt-BR](https://felipealb.medium.com/j%C3%A1-parou-para-pensar-que-tudo-na-vida-%C3%A9-um-evento-53aafc4ac75d)
+- [Live Coding CRUD API](https://youtu.be/vjn87Q7C1is)
 
 # License
 
